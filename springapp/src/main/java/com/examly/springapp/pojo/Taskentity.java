@@ -1,4 +1,4 @@
-package com.examly.springapp.entity;
+package com.examly.springapp.pojo;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;

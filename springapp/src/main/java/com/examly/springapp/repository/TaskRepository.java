@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
-import com.examly.springapp.entity.Taskentity;
+import com.examly.springapp.pojo.Taskentity;
  
 @Repository
 public interface TaskRepository  extends JpaRepository<Taskentity,String>{
