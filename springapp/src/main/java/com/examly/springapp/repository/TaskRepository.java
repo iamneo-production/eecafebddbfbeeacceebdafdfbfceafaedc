@@ -1,15 +1,9 @@
 package com.examly.springapp.repository;
+import com.examly.springapp.pojo.Task;
+
+import org.springframework.data.repository.CrudRepository;
 
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import java.util.Optional;
-
-import com.examly.springapp.pojo.Taskentity;
- 
-@Repository
-public interface TaskRepository  extends JpaRepository<Taskentity,String>{
-Optional<Taskentity> findByTaskId(String taskid);
-void deleteByTaskId(String taskid);
+public interface TaskRepository extends CrudRepository<Task, Long> {
 
 }
