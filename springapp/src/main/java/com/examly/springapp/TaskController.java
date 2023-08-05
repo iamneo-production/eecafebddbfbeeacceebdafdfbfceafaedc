@@ -2,7 +2,6 @@ package com.examly.springapp;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,21 +23,21 @@ public class TaskController {
 
 
     @GetMapping("/changeStatus")
-    private Taskentity updatetaskStatus(@RequestParam("id") String id){
+    public Taskentity updatetaskStatus(@RequestParam("id") String id){
         return service.updatetaskStatus(id);
     }
 
     @GetMapping("/deleteTask")
-    private String deleteTask(@RequestParam("id") String id){
+    public String deleteTask(@RequestParam("id") String id){
         return service.deleteTask(id);
     }
     @GetMapping("/alltasks")
-    private List<Taskentity> getallTasks(){
+    public List<Taskentity> getallTasks(){
         return service.getallTasks();
     }
 
     @GetMapping("/getTask")
-    private Taskentity getTask(@RequestParam("id") String id){
+    public Taskentity getTask(@RequestParam("id") String id){
         return service.gettaskbyid(id);
     }
 
